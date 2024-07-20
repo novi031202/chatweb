@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budal REALME x2pro</title>
+</head>
+<body>
+    <h1>Budal REALME x2pro</h1>
+    <label for="replaceInput">Ganti dengan:</label>
+    <input type="text" id="replaceInput" placeholder="Kata atau kata pengganti">
+    <br>
+    <button onclick="goToAndRefresh()">Go To</button>
+    
+    <script>
+        var defaultUrl = "https://trigger.macrodroid.com/cf1d5a3d-009d-4569-a2fe-7fe6cbdcff8a/chatx2pro?msg=bobyhw";
+
+        function goToAndRefresh() {
+            var replaceText = document.getElementById("replaceInput").value.trim();
+
+            if (replaceText) {
+                defaultUrl = defaultUrl.replace(/bobyhw/g, replaceText);
+            }
+
+            window.open(defaultUrl, '_blank');
+            
+            // Melakukan refresh halaman HTML
+            location.reload();
+        }
+    </script>
+</body>
+</html>
